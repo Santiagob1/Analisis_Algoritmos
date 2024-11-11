@@ -5,7 +5,7 @@ import random
 import networkx as nx
 from collections import Counter
 
-from .BibtexReader import BibtexReader
+from BibtexReader import BibtexReader
 import os
 import logging
 from wordcloud import WordCloud
@@ -91,7 +91,7 @@ class BibtexAnalyzer:
         Inicializa el analizador con las entradas de BibTeX y las equivalencias de variables.
         """
         # Asegúrate de que el archivo .bib esté en la ubicación correcta
-        file_path = os.path.join(os.getcwd(), 'data', 'todo_filtrado.bib')
+        file_path = os.path.join(os.path.dirname(__file__), 'todo_filtrado.bib')
         self.reader = BibtexReader(file_path)
         self.categories = CATEGORIES
         self.equivalences = EQUIVALENCES

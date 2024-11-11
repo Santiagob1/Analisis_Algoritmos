@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import random
 from flask_cors import CORS
 # En app.py
-from src.bibtex_analyzer import BibtexAnalyzer
+from BibtexAnalyzer import BibtexAnalyzer
 app = Flask(__name__)  # Primero creas la aplicación Flask
 CORS(app)  # Luego habilitas CORS para todas las rutas
 
